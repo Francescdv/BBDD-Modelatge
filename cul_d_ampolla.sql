@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2021 a las 11:46:51
+-- Tiempo de generación: 05-07-2021 a las 09:32:41
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -100,12 +100,12 @@ CREATE TABLE `ulleres` (
   `id_ulleres` int(8) NOT NULL,
   `proveidor_id` int(8) NOT NULL,
   `marca` varchar(80) NOT NULL,
-  `graduacio` decimal(10,0) NOT NULL,
-  `tipus_muntura` varchar(80) NOT NULL,
+  `graduacio` decimal(10,2) NOT NULL,
+  `tipus_muntura` enum('metàl·lica','pasta','flotant','') NOT NULL,
   `color_montura` varchar(80) NOT NULL,
   `color_vindre_1` varchar(80) NOT NULL,
   `color_vindre_2` varchar(80) NOT NULL,
-  `preu` decimal(10,0) NOT NULL
+  `preu` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -113,8 +113,8 @@ CREATE TABLE `ulleres` (
 --
 
 INSERT INTO `ulleres` (`id_ulleres`, `proveidor_id`, `marca`, `graduacio`, `tipus_muntura`, `color_montura`, `color_vindre_1`, `color_vindre_2`, `preu`) VALUES
-(1, 1, 'Sher', '1', 'flotant', 'blau', 'blau clar', 'blau fosc', '12'),
-(3, 1, 'lock', '0', 'metàl·lica', 'vermell', 'verd', 'blau', '12');
+(1, 1, 'Sher', '0.50', 'flotant', 'blau', 'blau clar', 'blau fosc', '122.54'),
+(3, 1, 'lock', '1.12', 'metàl·lica', 'vermell', 'verd', 'blau', '152.89');
 
 -- --------------------------------------------------------
 
